@@ -43,41 +43,45 @@
 })(jQuery); // End of use strict
 
 
-function showDarkbox(url) {
-  
-    let darkBoxVisible = false;
-    if(!darkBoxVisible) {
-     let x = (window.innerWidth - 1280) / 2;
-     let y = window.scrollY + 50;    // Create the darkBox
-     var div = document.createElement("div");
-     div.id = "darkbox";
-     div.innerHTML = '<img class="darkboximg" src="'+url+'" />';
-     document.body.appendChild(div);
-     let box = document.getElementById("darkbox");
-     box.style.left = x.toString()+"px";
-     box.style.top = y.toString()+"px";
-     box.style.height = 'auto';
-     box.addEventListener('click', (event) => {
-      // Remove it
-      let element = document.getElementById("darkbox");
-      element.parentNode.removeChild(element);     
-      
-      darkBoxVisible = false;})    
-      darkBoxVisible = true;  
-    } else {
-     // Remove it
-     let element = document.getElementById("darkbox");
-     element.parentNode.removeChild(element);    darkBoxVisible = false;
-  }
- }
+document.addEventListener('DOMContentLoaded', function () {
+    let currentIndex = 0;
+    const images = document.querySelectorAll('.gallery-img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.querySelector('.lightbox-content');
+    const closeBtn = document.querySelector('.close');
+    const nextBtn = document.querySelector('.next');
+    const prevbtn = document.querySelector('.prev');
 
- window.addEventListener('load', (event) => {
-    let images = document.querySelectorAll("img");
-    if(images !== null && images !== undefined && images.length > 0) {
-     images.forEach(function(img) {
-      img.addEventListener('click', (evt) => {
-       showDarkbox(img.src);
-      });
-     });
-    }
-   });
+    images.forEach((img, index) => {
+        img.addEventListener('click', () => {
+            currentIndex = index;
+            lightboxImage.src = images[index].src;
+            lightbox.style.display = 'flex';
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        lightboxImage.src = images[currentIndex].src;
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        lightboxImage.src = images[currentIndex].src;
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            lightbox.style.display = 'none';
+        } else if (event.key === 'ArrowRight') {
+            nextBtn.click();
+        } else if (event.key === 'ArrowLeft') {
+            prevBtn.click();
+        }
+    });
+});
+
