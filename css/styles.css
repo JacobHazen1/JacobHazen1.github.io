@@ -10531,55 +10531,60 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+/* Gallary */
 
 #gallery {
   line-height: 0;
-  -webkit-column-count: 5; /* split it into 5 columns */
-  -webkit-column-gap: 5px; /* give it a 5px gap between columns */
-  -moz-column-count: 5;
-  -moz-column-gap: 5px;
-  column-count: 5;
-  column-gap: 5px;
+  padding: 10px;
+  max-width: 1200px; /* Set a max-width to prevent the gallery from becoming too wide */
+  margin: 0 auto; /* Center the gallery */
+  -webkit-column-count: 4; /* Reduce the column count for larger images */
+  -webkit-column-gap: 15px; /* Increase the gap for better spacing */
+  -moz-column-count: 4;
+  -moz-column-gap: 15px;
+  column-count: 4;
+  column-gap: 15px;
 }
+
 #gallery img {
   width: 100% !important;
   height: auto !important;
-  margin-bottom: 5px; /* to match column gap */
+  margin-bottom: 15px; /* Match the gap */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   filter: grayscale(100%);
-  transition: filter 2s;
+  transition: filter 0.5s ease, transform 0.3s ease;
 }
+
+#gallery img:hover {
+  filter: none;
+  transform: scale(1.05);
+}
+
 @media (max-width: 1200px) {
-  #gallery {
-    -moz-column-count: 4;
-    -webkit-column-count: 4;
-    column-count: 4;
-  }
-}
-@media (max-width: 1000px) {
   #gallery {
     -moz-column-count: 3;
     -webkit-column-count: 3;
     column-count: 3;
   }
 }
-@media (max-width: 800px) {
+
+@media (max-width: 1000px) {
   #gallery {
     -moz-column-count: 2;
     -webkit-column-count: 2;
     column-count: 2;
   }
 }
-@media (max-width: 400px) {
+
+@media (max-width: 800px) {
   #gallery {
     -moz-column-count: 1;
     -webkit-column-count: 1;
     column-count: 1;
   }
 }
-
-#gallery img:hover {
-  filter: none;
-}
+/* fin Gallery */
 
 #darkbox {
   width: 1280px;
@@ -10629,7 +10634,9 @@ section.resume-section .resume-section-content {
   max-height: 80%;
 }
 
-.close, .prev, .next {
+.close,
+.prev,
+.next {
   cursor: pointer;
   color: white;
   font-size: 2em;
@@ -10641,7 +10648,8 @@ section.resume-section .resume-section-content {
   right: 20px;
 }
 
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

@@ -85,3 +85,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// Open the modal and display the clicked image
+function openModal(image) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("imgModal");
+    var captionText = document.getElementById("caption");
+    
+    modal.style.display = "block";
+    modalImg.src = image.src;
+    captionText.innerHTML = image.alt;
+  }
+  
+  // Close the modal
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
+  
