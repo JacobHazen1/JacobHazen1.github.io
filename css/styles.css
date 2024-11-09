@@ -10661,3 +10661,10 @@ section.resume-section .resume-section-content {
 .next {
   right: 10px;
 }
+
+.paper-image {
+  width: 800px; /* Set desired width */
+  height: 300px; /* Set desired height */
+  object-fit: cover; /* Ensures image scaling without distortion */
+  margin-bottom: 15px; /* Space between image and paper title */
+}
