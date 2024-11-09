@@ -10663,8 +10663,9 @@ section.resume-section .resume-section-content {
 }
 
 .paper-image {
-  width: 800px; /* Set desired width */
-  height: 300px; /* Set desired height */
-  object-fit: cover; /* Ensures image scaling without distortion */
-  margin-bottom: 15px; /* Space between image and paper title */
+  width: 100%; /* Set to full width of the parent container */
+  max-width: 800px; /* Limit maximum width */
+  height: auto; /* Automatically adjust height to maintain aspect ratio */
+  object-fit: cover;
+  margin-bottom: 15px;
 }
