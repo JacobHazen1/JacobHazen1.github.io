@@ -10670,3 +10670,39 @@ section.resume-section .resume-section-content {
   object-fit: cover;
   margin-bottom: 15px;
 }
+
+/* Abstract toggle styling */
+details.abstract {
+  margin-top: 0.5rem;
+}
+
+details.abstract > summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;           /* Removes default triangle in some browsers */
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Custom disclosure arrow */
+details.abstract > summary::before {
+  content: "▶";
+  display: inline-block;
+  transform: translateY(1px);
+  transition: transform 0.2s ease;
+  font-size: 0.9em;
+}
+
+/* Rotate arrow when open */
+details.abstract[open] > summary::before {
+  transform: rotate(90deg) translateY(0);
+}
+
+/* Abstract content box */
+details.abstract .abstract-body {
+  padding: 0.75rem 0 0 1.2rem;
+  border-left: 3px solid #e5e7eb; /* light gray */
+  margin-top: 0.35rem;
+}
