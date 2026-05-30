@@ -26,6 +26,8 @@
   <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
   <!-- Core theme CSS (includes Bootstrap)-->
   <link href="css/styles.css" rel="stylesheet" />
+  <!-- GLightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 
 <body id="page-top">
@@ -595,12 +597,14 @@
       <p class="gallery-description">Here are some pictures from my skateboarding days. I was a competitive skateboarder
         before my academic career.</p>
       <div id="gallery-skateboard" class="gallery">
-        <img src="s1.jpg" />
-        <img src="s2.jpg" />
-        <img src="s3.jpg" />
-        <img src="skate3.jpeg" />
-        <img src="skate4.jpeg" />
-        <img src="skate5.jpeg" />
+        <a href="s1.jpg" class="glightbox" data-gallery="skateboard"><img src="s1.jpg" /></a>
+        <a href="s2.jpg" class="glightbox" data-gallery="skateboard"><img src="s2.jpg" /></a>
+        <a href="s3.jpg" class="glightbox" data-gallery="skateboard"><img src="s3.jpg" /></a>
+        <a href="skate3.jpeg" class="glightbox" data-gallery="skateboard"><img src="skate3.jpeg" /></a>
+        <a href="skate4.jpeg" class="glightbox" data-gallery="skateboard"><img src="skate4.jpeg" /></a>
+        <a href="skate5.jpeg" class="glightbox" data-gallery="skateboard"><img src="skate5.jpeg" /></a>
+        <a href="skatingUofC.jpg" class="glightbox" data-gallery="skateboard"><img src="skatingUofC.jpg" /></a>
+        <a href="newspaper2.jpg" class="glightbox" data-gallery="skateboard"><img src="newspaper2.jpg" /></a>
       </div>
 
       <!-- Travel Pics Section -->
@@ -611,15 +615,14 @@
       </p>
 
       <div id="gallery-travel" class="gallery">
-        <img src="thai.jpg" />
-        <img src="thai2.jpg" />
-        <img src="thaifood.jpg" />
-        <img src="ny.jpg" />
-        <img src="port.jpg" />
-        <img src="rocky.jpg" />
-        <img src="gwc.jpg" />
-        <img src="wrestle.jpeg" />
-        <!-- Add more travel images as needed -->
+        <a href="thai.jpg" class="glightbox" data-gallery="travel"><img src="thai.jpg" /></a>
+        <a href="thai2.jpg" class="glightbox" data-gallery="travel"><img src="thai2.jpg" /></a>
+        <a href="thaifood.jpg" class="glightbox" data-gallery="travel"><img src="thaifood.jpg" /></a>
+        <a href="ny.jpg" class="glightbox" data-gallery="travel"><img src="ny.jpg" /></a>
+        <a href="port.jpg" class="glightbox" data-gallery="travel"><img src="port.jpg" /></a>
+        <a href="rocky.jpg" class="glightbox" data-gallery="travel"><img src="rocky.jpg" /></a>
+        <a href="gwc.jpg" class="glightbox" data-gallery="travel"><img src="gwc.jpg" /></a>
+        <a href="wrestle.jpeg" class="glightbox" data-gallery="travel"><img src="wrestle.jpeg" /></a>
       </div>
 
       <!-- Other Pics Section -->
@@ -632,13 +635,11 @@
       </p>
 
       <div id="gallery-other" class="gallery">
-        <img src="cow.jpg" />
-        <img src="dog.jpg" />
-        <img src="dog2.jpg" />
-        <img src="hockey.jpg" />
-        <img src="zoo.jpg" />
-
-        <!-- Add more other images as needed -->
+        <a href="cow.jpg" class="glightbox" data-gallery="other"><img src="cow.jpg" /></a>
+        <a href="dog.jpg" class="glightbox" data-gallery="other"><img src="dog.jpg" /></a>
+        <a href="dog2.jpg" class="glightbox" data-gallery="other"><img src="dog2.jpg" /></a>
+        <a href="hockey.jpg" class="glightbox" data-gallery="other"><img src="hockey.jpg" /></a>
+        <a href="zoo.jpg" class="glightbox" data-gallery="other"><img src="zoo.jpg" /></a>
       </div>
     </div>
   </section>
@@ -659,6 +660,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
   <!-- Core theme JS-->
   <script src="js/scripts.js"></script>
+  <!-- GLightbox -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>GLightbox({ selector: '.glightbox' });</script>
 </body>
 
 </html>
