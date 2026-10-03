@@ -10671,6 +10671,24 @@ section.resume-section .resume-section-content {
   margin-bottom: 15px;
 }
 
+/* Group headings inside the Papers section (between the h2 and the paper titles) */
+.paper-group {
+  font-family: "Saira Extra Condensed", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.paper-group-note {
+  font-size: 0.5em;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
 /* Abstract toggle styling */
 details.abstract {
   margin-top: 0.5rem;
